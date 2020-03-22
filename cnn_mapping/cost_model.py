@@ -112,7 +112,7 @@ def get_if_access(level, point, layer, mac_capacity = 1):
     fy_par = reduce(mul, point.loop_partitionings[le.FY][level:], 1)
     oc_par = reduce(mul, point.loop_partitionings[le.OC][level:], 1)
 
-    return fx_acc * fy_acc * oc_acc * fx_par * fy_par * oc_par / (layer.wstd * layer.hstd)
+    return fx_acc * fy_acc * oc_acc * fx_par * fy_par * oc_par / float(layer.wstd * layer.hstd)
 
 
 def get_of_access(level, point, layer, mac_capacity = 1):
